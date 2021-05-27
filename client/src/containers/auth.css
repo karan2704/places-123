@@ -1,0 +1,56 @@
+.auth {
+  position: fixed;
+  display: block;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.auth img {
+  position: absolute;
+  z-index: -100;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+.authForm {
+  align-items: center;
+  text-align: center;
+  margin: 100px auto;
+  display: flex;
+  flex-direction: column;
+  width: 18%;
+  border: white 4px solid;
+  min-width: 200px;
+  border-radius: 10px;
+  padding: 0;
+  color: aliceblue;
+}
+
+.authForm label {
+  color: aliceblue;
+  margin: 10px;
+}
+
+.authForm input {
+  border-radius: 7px;
+  height: 25px;
+}
+
+.authBtn {
+  width: 40%;
+  height: 30px;
+  background-color: #caf7e3;
+  margin: 20px auto 10px;
+  border-radius: 8px;
+  border: transparent;
+}
+
+.switchBtn {
+  background: transparent;
+  margin: 20px auto 10px;
+  border: transparent;
+  text-decoration: underline;
+  color: aliceblue;
+}

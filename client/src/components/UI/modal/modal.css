@@ -1,0 +1,38 @@
+.visible {
+  width: 40%;
+  min-width: 350px;
+  height: 200px;
+  position: fixed;
+  left: 45%;
+  top: 50%;
+  margin-left: -130px;
+  margin-top: -150px;
+  background: aquamarine;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.visible h3 {
+  margin: 50px auto;
+}
+
+.green {
+  width: 80px;
+  height: 30px;
+  margin: auto 10px;
+  background: #a5e1ad;
+  border-radius: 5px;
+  border: transparent;
+}
+
+.red {
+  width: 80px;
+  height: 30px;
+  background: crimson;
+  border-radius: 5px;
+  border: transparent;
+}
+
+.invisible {
+  display: none;
+}
