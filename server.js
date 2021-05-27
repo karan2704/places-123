@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
+require('dotenv').config();
 
 const userRouter = require('./routes/user')
 const placeRouter = require('./routes/place');
@@ -40,5 +41,5 @@ app.use('/place', placeRouter)
 
 
 app.listen(process.env.PORT || 5000, ()=>{
-    console.log(`Listening on PORT: ${port}`);
+    console.log(`Listening on PORT}`);
 })
