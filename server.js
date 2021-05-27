@@ -6,7 +6,7 @@ const userRouter = require('./routes/user')
 const placeRouter = require('./routes/place');
 
 const app = express()
-const PORT = process.env.PORT || 5000
+
 
 
 app.use(function(req, res, next) {
@@ -39,6 +39,6 @@ app.use('/place', placeRouter)
 
 
 
-app.listen(PORT, ()=>{
-    console.log(`Listening on PORT: ${PORT}`);
+app.listen(process.env.PORT || 5000, ()=>{
+    console.log(`Listening on PORT: ${port}`);
 })
