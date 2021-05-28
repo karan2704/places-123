@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const path = require('path')
+const cors = require('cors')
 require('dotenv').config();
 
 const userRouter = require('./routes/user')
@@ -8,13 +9,18 @@ const placeRouter = require('./routes/place');
 
 const app = express()
 
+app.use(
+    cors({
+        origin: "*",
+        credentials: true
+    })
+)
 
-
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-});
+// app.use(function(req, res, next) {
+//     res.header("Access-Control-Allow-Origin", "*");
+//     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+//     next();
+// });
 
 app.use(express.json())
 
@@ -41,5 +47,5 @@ app.use('/place', placeRouter)
 
 
 app.listen(process.env.PORT || 5000, ()=>{
-    console.log(`Listening on PORT}`);
+    console.log(`Server is up and running`);
 })
