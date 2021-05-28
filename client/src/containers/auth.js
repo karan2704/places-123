@@ -29,7 +29,7 @@ const Auth = (props) => {
 
         axios({
             method: 'post',
-            url: 'http://localhost:5000/user/login',
+            url: '/user/login',
             headers: {
                 'Content-Type': 'application/json'
             },
@@ -52,7 +52,7 @@ const Auth = (props) => {
         e.preventDefault()
         axios({
             method: 'post',
-            url: 'http://localhost:5000/user/register',
+            url: '/user/register',
             headers: { 
               'Content-Type': 'application/json'
             },
