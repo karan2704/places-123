@@ -25,6 +25,8 @@ app.use(function(req, res, next) {
 
 app.use(express.json())
 
+const port = process.env.PORT || 5000
+
 const url = process.env.MONGO_URI
 
 mongoose.connect(url, {
@@ -47,6 +49,6 @@ app.use('/place', placeRouter)
 
 
 
-app.listen(process.env.PORT || 5000, ()=>{
-    console.log(`Server is up and running`);
+app.listen(port, ()=>{
+    console.log(`Server is up and running on port ${port}`);
 })
