@@ -3,10 +3,12 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Redirect
+  Redirect,
+  withRouter
 } from "react-router-dom";
 import './App.css';
 import AddPlace from "./components/placeComponents/addPlace";
+import Toolbar from "./components/UI/toolbar/toolbar";
 import Auth from "./containers/auth";
 import Main from "./containers/main";
 import Places from "./containers/places";
@@ -42,23 +44,26 @@ const App = () => {
   if(authenticated.current){
     routes = (
       <Switch>
-        <Route path="/:uid/places" exact component={Places} />
-         {/* <Route path="/:uid/place/:pid" exact component={} /> */}
-        <Route path="/:uid/new" exact component={AddPlace} /> 
-        <Redirect to="/home" exact component={Main} />
+        <Route path="/:uid/places" exact component={withRouter(Places)} />
+        <Route path="/home" exact component={withRouter(Main)} />
+         {/* <Route path="/:uid/:pid" exact component={edit} /> */}
+        <Route path="/:uid/new" exact component={withRouter(AddPlace)} /> 
+        <Redirect to="/home" component={withRouter(Main)} />
      </Switch>
     )
   } else {
     routes = (
       <Switch>
-        <Route path="/auth" exact component={Auth} />
-        <Redirect to="/home" exact component={Main} />
+        <Route path="/auth" exact component={withRouter(Auth)} />
+        <Route path="/home" exact component={withRouter(Main)} />
+        <Redirect to="/home"  component={withRouter(Main)} />
       </Switch>
     )}
   return (
     <authContext.Provider 
     value = {{authenticated: authenticated, userId: userId, username: username, login: login, logout: logout}} >
       <div className="App">
+        <Toolbar />
       <Router>
         {routes}
       </Router>

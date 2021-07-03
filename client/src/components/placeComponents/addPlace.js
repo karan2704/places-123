@@ -15,7 +15,8 @@ function AddPlace(props) {
         description: '',
         lat: '',
         lon: '',
-        uid: ''
+        uid: '',
+        img: null
     })
 
     const params = useParams()
@@ -58,6 +59,7 @@ function AddPlace(props) {
                 <label>Coordinates</label>
                 <input name='lat'  value={input.lat} onChange={changeHandler} />
                 <input name='lon'  value={input.lon} onChange={changeHandler} />
+                <input type='file' name='img'  value={input.img} onChange={changeHandler} />
                 <div className="addBtn">
                 <button type='submit'><AddIcon /></button>
                 <button type='button'><ClearIcon /></button>

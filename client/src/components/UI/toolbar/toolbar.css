@@ -1,0 +1,22 @@
+.toolbar {
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  color: aliceblue;
+  margin-bottom: 100px;
+  z-index: 100;
+  position: fixed;
+  background: transparent;
+}
+
+.toolbar ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.toolbar ul li link {
+  text-decoration: none;
+}

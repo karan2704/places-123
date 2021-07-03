@@ -1,8 +1,9 @@
 import React from 'react'
 
-function Main() {
+
+const Main = () => {
     return (
-        <div>
+        <React.Fragment>
             <h1>Hello there!!!!</h1>
             <p>Sed ut perspiciatis unde omnis iste natus error
                  sit voluptatem accusantium doloremque laudantium, 
@@ -19,7 +20,8 @@ function Main() {
                     reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, 
                     vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
 
-        </div>
+        </React.Fragment>
+            
     )
 }
 

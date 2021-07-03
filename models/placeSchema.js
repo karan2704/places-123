@@ -24,6 +24,10 @@ const placeSchema = new mongoose.Schema({
     lon: {
         type: Number,
         required: true
+    },
+    img: {
+        type: Array,
+        required: true
     }
 })
 

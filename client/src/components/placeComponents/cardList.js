@@ -51,6 +51,7 @@ const CardList = () => {
                     description={post.description}
                     lat={post.lat}
                     lon={post.lon}
+                    img={post.img}
                     del={deleteHandler}
                     />
                 </li>

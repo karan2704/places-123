@@ -48,7 +48,8 @@ placeRouter.post('/', (req, res) => {
         description,
         lat,
         lon,
-        uid
+        uid,
+        img
     } = req.body
     
     
@@ -74,7 +75,8 @@ placeRouter.post('/', (req, res) => {
                 country,
                 description,
                 lat,
-                lon
+                lon,
+                img
             })
             console.log(newPlace);
             

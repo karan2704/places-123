@@ -7,11 +7,11 @@ import './card.css'
 
 const Card = (props) => {
     
-    
+    console.log(props.img[0]);
     return(
         <div>
             <div class='Card'>
-                <img src="https://www.makemytrip.com/travel-guide/media/dg_image/agra/1_Taj_Mahal.jpg" alt="" />
+                <img src={props.img[0]} alt='No Image' />
                 <h3>{props.name}</h3>
                 <h4>{props.city}, {props.country}</h4>
                 <p>{props.description}</p>
