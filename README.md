@@ -1,4 +1,4 @@
-Places Web App
+#Places Web App
 <br></br>
 Link to the application: https://places-123.herokuapp.com/auth
 <br></br>
@@ -10,9 +10,9 @@ Technologies used:
 
 How to run:
 1. Clone/Download this repository to your local system.
-2. cd into the project folder and run the command 'npm i' to install all the required dependencies.
-3. To run the development server use the command 'npm run dev'.
-4. To run just the client side cd into the client folder and use 'npm start'
+2. cd into the project folder and run the command `npm i` to install all the required dependencies.
+3. To run the development server use the command `npm run dev`.
+4. To run just the client side cd into the client folder and use `npm start`
 
 How it works:
 A user can register to Places and then log into their account. After which they get an option to add a post.
