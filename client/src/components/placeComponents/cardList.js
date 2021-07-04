@@ -1,14 +1,16 @@
 import React, { useState, useEffect} from 'react'
 import {useParams} from 'react-router-dom'
 import axios from 'axios'
+import GoogleMapReact from 'google-map-react'
 import Card from './card'
 import Modal from '../UI/modal/modal'
 import Backdrop from '../UI/backdrop/backdrop'
+import MapHolder from '../UI/map/mapHolder'
 
 import './cardList.css'
 
 const CardList = () => {
-    const [posts, setposts] = useState([])
+    const [posts, setPosts] = useState([])
     const [toggle, setToggle] = useState(false)
     const [modal, setModal] = useState('')
     const username = useParams();
@@ -22,22 +24,25 @@ const CardList = () => {
             } ,
         })
         .then((response) => {
-            setposts(response.data.msgBody)
+            setPosts(response.data.msgBody)
         })
         .catch((err) => {
             console.log(err);
         })
     }, [])
 
-    const deleteHandler = () => {
+    const mapToggle = () => {
         setToggle(true)
-        setModal('Are you sure you want to delete this post?')
     }
 
     const backdropHandler = () => {
         setToggle(false)
     }
 
+    const center =  {
+        lat: 28.6380333,
+        lng: 77.215812
+      }
 
     const placeList = posts.map((post, index) => {
         return (
@@ -52,7 +57,7 @@ const CardList = () => {
                     lat={post.lat}
                     lon={post.lon}
                     img={post.img}
-                    del={deleteHandler}
+                    show = {mapToggle}
                     />
                 </li>
         )
@@ -74,10 +79,19 @@ const CardList = () => {
             click={backdropHandler} />
             <div className='postList'>
             <Modal
-            show={toggle}
-            >
-                {modal}
-            </Modal>
+                style={{ height: '100vh', width: '100%' }}
+                show= {toggle}>
+                    <GoogleMapReact
+                    bootstrapURLKeys={{ key: 'AIzaSyCPMwWgYAKcLKX6XjJkqaFvlLo_avNq29k'}}
+                    defaultCenter= {center}
+                    defaultZoom= {10}
+                    >     
+                       <MapHolder 
+                        lat={center.lat}
+                        lng={center.lng}
+                        text="•"/>  
+                    </GoogleMapReact>
+                </Modal>
                 {renderContent}
             </div>  
         </React.Fragment>      
