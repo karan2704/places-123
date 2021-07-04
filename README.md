@@ -17,5 +17,5 @@ A user can register to Places and then log into their account. After which they 
 Doing so will create a post with the details of the place and there are 3 options with it. You can either edit it, delete it or view it on map (using Google Maps API).
 
 Snapshots:
-<img src="./images/auth.jpeg" alt="Not found" />
-<img src="./images/main.jpeg" alt="Not found" />
+<img src="./images/auth.JPG" alt="Not found" />
+<img src="./images/main.JPG" alt="Not found" />
