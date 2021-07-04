@@ -1,5 +1,7 @@
 Places Web App
+<br></br>
 Link to the application: https://places-123.herokuapp.com/auth
+<br></br>
 Technologies used:
 1. ReactJS (Frontend)
 2. Material UI (Styling)
