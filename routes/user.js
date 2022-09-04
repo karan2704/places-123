@@ -80,16 +80,16 @@ userRouter.post('/register', (req, res) => {
     })
 })
 
-const data = new User({
-    username: 'admin',
-    hashedPassword: '$2b$10$IxHPbaaaRWEghuRJEz1yz.33gqIhU72vyWA1fnP0r7aUg.jTWSvnW'
-})
+// const data = new User({
+//     username: 'admin',
+//     hashedPassword: '$2b$10$IxHPbaaaRWEghuRJEz1yz.33gqIhU72vyWA1fnP0r7aUg.jTWSvnW'
+// })
 
-data.save((err) => {
-    if(err){
-        console.log(err);
-    } 
-})
+// data.save((err) => {
+//     if(err){
+//         console.log(err);
+//     } 
+// })
 
 
        
